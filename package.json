@@ -1,19 +1,31 @@
 {
   "name": "le-front-end-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config rollup.config.js"
   },
-  "keywords": ["le,le-front"],
+  "keywords": [
+    "le,le-front"
+  ],
   "author": "",
   "license": "ISC",
-  "repository":{
-    "type":"git",
+  "repository": {
+    "type": "git",
     "url": "git://github.com/marcoolTang/npmModules.git"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "rollup": "^2.75.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
 }
