@@ -1,12 +1,19 @@
 {
   "name": "le-front-end-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["le,le-front"],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository":{
+    "type":"git",
+    "url": "git://github.com/marcoolTang/npmModules.git"
+  },
+  "files": [
+    "dist"
+  ]
 }
