@@ -1,11 +1,23 @@
 le-front-end utils
 
-npm install le-front-end-utils -D
+`npm install le-front-end-utils -D`
 
-formatDate 
-for example: data = {
-    MM:1,
-    DD:25,
-    YY:2015,
-    dateFormat:"MM/DD/YY"
+```
+import {formatDate} from "le-front-end-utils"; //es6
+
+//data结构 2选1;支持timeStamp或者单日期格式
+let data = {
+    timeStamp:(new Date()).getTime(),
+    dateFormat:"yyyy/dd/mm"
 }
+
+let data1 = {
+    MM:"1",
+    DD:"2",
+    YY:"1992",
+    dateFormat:"yyyy/dd/mm"
+}
+
+formatDate(data)
+
+```
