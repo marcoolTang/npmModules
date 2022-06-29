@@ -20,8 +20,12 @@ const formatDate = (data)=>{
     dateArr&&dateArr.forEach(item=>{
         let upperCase = item.toUpperCase();
         upperCase = upperCase.replace(regExp,"YY");
-        if(upperCase&&dateObj[upperCase]){
-            res.push(dateObj[upperCase])
+        let formatDate = dateObj[upperCase].toString();
+        if(upperCase&&formatDate){
+            if(item.toUpperCase() == "YY"){
+                formatDate =formatDate?.slice(formatDate.length-2,formatDate.length)
+            }
+            res.push(formatDate)
         }
     });
     return res.join("/")
