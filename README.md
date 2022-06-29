@@ -1,4 +1,5 @@
 le-front-end utils
+npm publish 需要发布dist文件
 
 `npm install le-front-end-utils -D`
 
