@@ -1,7 +1,7 @@
 let { formatDate } = require("./index.js");
 
 let data = {
-    timeStamp:(new Date()).getTime(),
-    dateFormat:"YYYY/DD/MM"
+    timeStamp:1656000000000,
+    dateFormat:"DD/MM/YY"
 }
 console.log(formatDate(data))

@@ -1,11 +1,12 @@
 {
   "name": "le-front-end-utils",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config rollup.config.js"
+    "build": "rollup --config rollup.config.js",
+    "go": "npm publish . --registry https://npm.lefile.cn"
   },
   "keywords": [
     "le,le-front"
