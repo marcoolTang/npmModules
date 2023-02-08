@@ -4,7 +4,8 @@ export default {
     input: 'index.js',
     output: {
       file: 'dist/bundle.js',
-      format: 'umd'
+      format: 'umd',
+      name:'file'//必须，不然报标题的错
     },
     plugins: [
         babel({

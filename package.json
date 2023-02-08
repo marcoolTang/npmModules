@@ -1,7 +1,7 @@
 {
   "name": "le-front-end-utils",
-  "version": "1.2.0",
-  "description": "",
+  "version": "1.2.1",
+  "description": "le-front-end utils\r npm publish 需要发布dist文件",
   "main": "dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
   "keywords": [
     "le,le-front"
   ],
-  "author": "",
+  "author": "Marco Tang",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -28,5 +28,9 @@
     "@babel/preset-env": "^7.18.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-uglify": "^6.0.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/marcoolTang/npmModules/issues"
+  },
+  "homepage": "https://github.com/marcoolTang/npmModules#readme"
 }
