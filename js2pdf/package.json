@@ -1,0 +1,44 @@
+{
+  "name": "le-js2pdf",
+  "version": "0.0.1",
+  "description": "le-js2pdf\r npm publish 需要发布dist文件",
+  "main": "dist/bundle.js",
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean:dist && rollup --config rollup.config.js",
+    "test": "npm run clean:test && rollup --config rollup.config.dev.js",
+    "go": "npm publish . --registry https://npm.lefile.cn",
+    "clean:dist": "rimraf ./dist",
+    "clean:test": "rimraf ./dist/test"
+  },
+  "keywords": [
+    "le,le-front"
+  ],
+  "author": "Marco Tang",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marcoolTang/npmModules.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "rimraf": "^4.1.2",
+    "rollup": "^3.14.0"
+  },
+  "bugs": {
+    "url": "https://github.com/marcoolTang/npmModules/issues"
+  },
+  "homepage": "https://github.com/marcoolTang/npmModules#readme"
+}
