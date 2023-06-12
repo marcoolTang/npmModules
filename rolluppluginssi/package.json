@@ -1,7 +1,7 @@
 {
-  "name": "rolluppluginssi",
-  "version": "1.0.0",
-  "description": "```javascript\r // rollup.config.js\r const SSICompileRollupplugin = require('ssi-webpack5-plugin')\r module.exports = {\r     // config\r     plugin: [\r         new SSICompileRollupplugin({\r             publicPath: '',\r             localBaseDir: '/',\r             minify: false,\r             proxy:\"\",//可以使用代理\r             pathRewrite:{\r                 '^api':\"xxx\",//支持正则替换\r             },\r             remoteBasePath:\"http://baidu.com\",//如果传了此参数，则表示从远程http请求中获取ssi文件的内容\r             variable:{\r                 'QUERY_STRING':\"test=1\",//如果ssi文件地址里有引用变量,如${QUERY_STRING}，则会用此参数里的对应key的值替换\r             }\r         })\r     ]\r }\r ```",
+  "name": "rollup-plugin-ssicompile",
+  "version": "1.0.1",
+  "description": "ssicompile plugin, seems like wekback5-plugin-ssicompile",
   "main": "index.js",
   "type": "module",
   "directories": {
@@ -28,5 +28,20 @@
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marcoolTang/npmModules.git"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "index.js"
+  ],
+  "keywords": [
+    "rollup",
+    "plugin",
+    "ssi"
+  ]
 }
