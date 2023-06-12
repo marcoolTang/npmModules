@@ -1,15 +1,16 @@
 {
   "name": "rollup-plugin-ssicompile",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ssicompile plugin, seems like wekback5-plugin-ssicompile",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "type": "module",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "rollup -c ./test/rollup.config.mjs",
-    "debug": "node --inspect-brk ./node_modules/rollup/dist/bin/rollup --config ./test/rollup.config.mjs"
+    "debug": "node --inspect-brk ./node_modules/rollup/dist/bin/rollup --config ./test/rollup.config.mjs",
+    "build": "rollup -c ./rollup.config.mjs"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.1",
     "@rollup/plugin-html": "^1.0.2",
+    "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
     "glob": "^10.2.7",
