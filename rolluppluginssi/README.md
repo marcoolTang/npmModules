@@ -4,7 +4,7 @@
 
 ```javascript
 // rollup.config.js
-const SSICompileRollupplugin = require('ssi-webpack5-plugin')
+import  SSICompileRollupplugin from '@rollup/plugin-ssicompile';
 module.exports = {
     // config
     plugin: [
@@ -30,12 +30,12 @@ module.exports = {
 > 插件的资源是根据webpack已有资源表中查找`.html`后缀产生的。所以正常需要配合其他插件/loader去读取.html作为入口
 
 ```javascript
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const SSICompileRollupplugin = require('ssi-webpack-plugin')
+import  html from "@rollup/plugin-html"
+import  SSICompileRollupplugin from '@rollup/plugin-ssicompile'
 module.exports = {
     // config
     plugin: [
-        new HtmlWebpackPlugin({
+        new html({
             // setting
         }),
         new SSICompileRollupplugin({
