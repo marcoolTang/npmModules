@@ -1,0 +1,32 @@
+{
+  "name": "rolluppluginssi",
+  "version": "1.0.0",
+  "description": "```javascript\r // rollup.config.js\r const SSICompileRollupplugin = require('ssi-webpack5-plugin')\r module.exports = {\r     // config\r     plugin: [\r         new SSICompileRollupplugin({\r             publicPath: '',\r             localBaseDir: '/',\r             minify: false,\r             proxy:\"\",//可以使用代理\r             pathRewrite:{\r                 '^api':\"xxx\",//支持正则替换\r             },\r             remoteBasePath:\"http://baidu.com\",//如果传了此参数，则表示从远程http请求中获取ssi文件的内容\r             variable:{\r                 'QUERY_STRING':\"test=1\",//如果ssi文件地址里有引用变量,如${QUERY_STRING}，则会用此参数里的对应key的值替换\r             }\r         })\r     ]\r }\r ```",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "rollup -c ./test/rollup.config.mjs",
+    "debug": "node --inspect-brk ./node_modules/rollup/dist/bin/rollup --config ./test/rollup.config.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.1",
+    "@rollup/plugin-html": "^1.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "glob": "^10.2.7",
+    "html-minifier": "^4.0.0",
+    "lodash": "^4.17.21",
+    "request": "^2.88.2",
+    "rollup": "^3.25.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0"
+  }
+}
